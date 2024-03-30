@@ -9,9 +9,9 @@
 // Execute `rustlings hint iterators3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
-use std::fmt::Result;
+
+// use std::fmt::Result;
 
 #[derive(Debug, PartialEq, Eq)]
 pub enum DivisionError {
@@ -32,7 +32,7 @@ pub fn divide(a: i32, b: i32) -> Result<i32, DivisionError> {
     if b == 0 {
         return Err(DivisionError::DivideByZero);
     } else if a % b == 0 {
-        Ok(a / b)
+        return Ok(a / b);
     } else {
         return Err(DivisionError::NotDivisible(NotDivisibleError{
             dividend: a,
